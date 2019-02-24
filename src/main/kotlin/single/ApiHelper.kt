@@ -1,3 +1,5 @@
+package single
+
 import kotlin.properties.Delegates
 
 /**
@@ -7,7 +9,7 @@ class ApiHelper private constructor() {
 
     companion object {
         //延迟属性（lazy properties）
-        val instance by lazy { ApiHelper() }
+        val instance by lazy(mode = LazyThreadSafetyMode.SYNCHRONIZED) { ApiHelper() }
     }
 
     init {
