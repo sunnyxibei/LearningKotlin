@@ -2,7 +2,7 @@ interface Study {
     fun study()
 }
 
-class Student(cheater: Cheater) : Study by cheater
+class Student(cheater: Cheater) : Person(), Study by cheater
 
 class Cheater() : Study {
     override fun study() {

@@ -1,7 +1,7 @@
 import kotlin.properties.ReadWriteProperty
 import kotlin.reflect.KProperty
 
-class Teacher {
+class Teacher : Person() {
     fun printName() {
         println(name)
     }
